@@ -1,0 +1,25 @@
+Rotaru Razvan Paul
+    333CA
+
+
+
+Tema 3
+
+
+Pentru aplicarea filtrului se imparte matricea in mai multe blockuri de urmatoarea forma arborescenta:
+    - matricea corespunzatoare dimensiunii matricii parintelui si numarului de copii ai parintelui
+    - borduri sub forma de coloane de 0
+    - 2 linii de margine (pentru primul si ultimul copil al fiecarui nod va exista o margine plina de 0)
+
+Procesele isi cunosc doar vecinii iar comunicarea arata astfel:
+    - rootul trimite imaginea impartita impreuna cu bordurile
+    - toti copii o impart la locul lor
+    - frunzele o prelucreaza apoi o trimit parintilor
+    - nodurile concateneaza rezultatele
+
+
+Pentru statistici am folosit urmatoarea metoda:
+    - tin un vector pentru fiecare frunza in parte cu numarul de linii modificate 
+    - trimit de la frunza la parinti
+    - marinti fac sau intre vectorii de la copii
+    - trimit mai departe pana la root
